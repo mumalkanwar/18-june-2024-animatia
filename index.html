@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animatia Assignment</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+        [data-parent="somevalue1"]{
+             width: 280px;
+             height: 210px;
+             background: red url("./img/1.jpg") 0px/cover;
+             position:relative;
+            }
+            [data-parent="somevalue1"]:hover  [data-overlay1="somevalue2"]{
+                height:210px;
+            }
+         [data-overlay1="somevalue2"]{
+             width: 280px;
+             height: 0px;
+             background-color:rgba(0,0,0,0.25);
+             position:absolute;
+             top:0px;
+             right:0px;
+             transition:all .2s linear;
+         }
+         [data-parent="somevalue1"]:hover [data-overlay2="somevalue3"]{
+            height:210px;
+         }
+         [data-overlay2="somevalue3"]{
+             width: 280px;
+             height: 0px;
+             background-color:rgba(0,0,0,0.25);
+             position:absolute;
+             bottom:0px;
+             left:0px;
+             transition:all .2s linear;
+         }
+         [data-parent="somevalue1"]:hover [data-circle1="somevalue4"]{
+            opacity:1;
+         }
+         [data-parent="somevalue1"]:hover [data-circle2="somevalue5"]{
+                  opacity: 1;
+         }
+         
+         [data-circle1="somevalue4"],[data-circle2="somevalue5"]{
+            display:block;
+            width:40px;
+            height:40px;
+            line-height:40px;
+            border-radius: 40px;
+            background-color:#fff;
+            position:absolute;
+            color:#333;
+            text-align: center;
+            top:85px;
+            left:140px;
+            opacity:0;
+            transition: all .5s linear .5s;
+        }
+        [data-circle1="somevalue4"]{
+            left:95px;
+        }
+        
+        </style>
+    </head>
+    <body>
+         <div data-parent="somevalue1">
+            <div data-overlay1="somevalue2"></div>
+            <div data-overlay2="somevalue3"></div>
+            <a href="https://google.com" target="_blank" data-circle1="somevalue4">
+                <i class="fa-solid fa-link"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" data-circle2="somevalue5">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+         </div>
+         <div data-parent="somevalue2"></div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </body>
+</html>
